@@ -25,7 +25,7 @@ namespace CMP1903_A1_2324
             var test = new Testing();
             test.RunTests(); 
 
-            while (input != "exit")
+            while (input.ToLower() != "exit")
             {
                 var (sum, roll1, roll2, roll3) = gameObj.StartGame();
 
