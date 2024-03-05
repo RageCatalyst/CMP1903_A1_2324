@@ -6,24 +6,23 @@ using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
+    /// <summary>
+    /// Die class to hold the current die value and roll the die.
+    /// </summary>
     internal class Die
     {
         /*
          * The Die class should contain one property to hold the current die value,
          * and one method that rolls the die, returns and integer and takes no parameters.
          */
-        
-        /// <summary>
-        /// Die class to hold the current die value and roll the die.
-        /// </summary>
 
         //Property
-        private static Random RND = new Random();
+        private static Random _rnd = new Random();
         
         /// <summary>
         /// RollVal property to hold the current die value.
         /// </summary>
-        public int RollVal { get; set; } = RND.Next(1, 6);
+        public int RollVal { get; private set; } = _rnd.Next(1, 7);
 
         /// <summary>
         /// Method to roll the die randomly and return the value.
@@ -31,7 +30,7 @@ namespace CMP1903_A1_2324
         /// <returns>The rolled value</returns>
         public int Roll()
         {
-            RollVal = RND.Next(1, 6);
+            RollVal = _rnd.Next(1, 7);
             return RollVal;
         }
     }

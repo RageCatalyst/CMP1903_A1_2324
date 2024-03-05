@@ -19,11 +19,13 @@ namespace CMP1903_A1_2324
              * Create a Testing object to verify the output and operation of the other classes.
              */
             
-            var input = "";
-            var gameObj = new Game();
             
-            var test = new Testing();
+            
+            Testing test = new Testing();
             test.RunTests(); 
+            
+            string input = "";
+            Game gameObj = new Game();
 
             while (input.ToLower() != "exit")
             {
